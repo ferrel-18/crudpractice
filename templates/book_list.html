@@ -1,0 +1,20 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+    <h1>Book List</h1>
+    <ul>
+    {% for book in books %}
+        <li><a href="{% url 'book_detail' pk=book.pk %}">{{ book.title }}</a></li>
+    {% empty %}
+        <li>No books.</li>
+
+
+</body>
+</html>
